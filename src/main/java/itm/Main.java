@@ -2,8 +2,8 @@ package itm;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import itm.one.*;
-import itm.three.Three;
 import itm.two.Two;
+import itm.three.Three;
 
 import java.io.File;
 import java.io.IOException;
