@@ -24,9 +24,10 @@ public class Two {
         JsonNode jsonNode = objectMapper.readTree(getPosts(userId));
         Stream<JsonNode> stream = StreamSupport.stream(jsonNode.spliterator(), false);
 
-        return stream
-                    .max((a, b) -> a.get("id").asInt() - b.get("id").asInt())
-                    .get().get("id").asText();
+        return stream.max((a, b) -> a.get("id").asInt() - b.get("id").asInt())
+                    .get()
+                    .get("id")
+                    .asText();
     }
 
     public String getComments(String postId) throws IOException, InterruptedException {
